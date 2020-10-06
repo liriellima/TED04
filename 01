@@ -1,0 +1,23 @@
+//exerc01
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main (void){
+  setlocale(LC_ALL,"");
+  int  a,  b,  c,  e=0;
+  printf("escreva a quantidade de linhas desejadas no triangulo de floyd:");
+  scanf("%d",&a);
+  b=1;
+  while (b<=a){
+    c=1;
+    while (c<=b){
+      e++;
+      printf("%d",e);
+      c++;
+    }
+    printf("\n");
+    b++;
+   }
+   return 0;
+   }
