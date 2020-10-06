@@ -1,0 +1,45 @@
+//exercicio02
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main (void){
+  int a= 0, f= 0, sex, p=50;
+  float al, menor_al, maior_al, med_p = 0.0, med_f = 0.0, m= 0, pc_h;
+
+  while (a < p) {
+    printf(" sua altura: ");
+    scanf("%f", &al);
+    printf("0 - Masculino\n1 Feminino\n>> ");
+    scanf("%d", &sex);
+
+    if (a == 0){
+      menor_al = al;
+      maior_al = al;
+    } else {
+      if (al < menor_al){
+        menor_al = al;
+      }
+      if (al > maior_al){
+        maior_al = al;
+      }
+    }
+
+    med_p = med_p + al;
+
+    if (sex == 1){
+      f++;
+      med_f = med_f + al;
+    } else {
+      m++;
+    }
+
+    a++;
+
+  }
+  med_p = med_p / p;
+  med_f = med_f / f;
+  pc_h = (m / p) * 100;
+  printf("Resultados:\nmaior altura encontrada : %.2f\nmenor altura encontrada : %.2f\nmédia de altura das mulheres : %f\nmédia de altura da população : %f\npercentual de homens na população : %.2f %%", maior_al, menor_al, med_f, med_p, pc_h);
+  return 0;
+}
